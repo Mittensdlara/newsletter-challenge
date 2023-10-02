@@ -1,3 +1,5 @@
+
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: hsl(234, 29%, 20%);
@@ -43,6 +45,12 @@ input {
   height: 50px;
   border-radius: 10px;
   padding-left: 20px;
+
+}
+.register {
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .email {
@@ -51,11 +59,24 @@ input {
   font-weight: 700;
   color: hsl(234, 29%, 20%);
 }
+input[type="email"]:invalid {
+  border: 2px solid red;
+  background-color: #fbe7dd;
+}
+
+.error-message {
+  color: red;
+  display: none;
+  font-size: 12px;
+  font-weight: 700;
+  padding-top: 28px;
+
+}
 .features-list {
-    font-size: 15px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    color: hsl(234, 29%, 20%);
+  font-size: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: hsl(234, 29%, 20%);
 }
 button {
   font-weight: 700;
@@ -69,7 +90,7 @@ button {
   cursor: pointer;
 }
 button:hover {
-    background-color: #FF6A3A;
+  background-color: #ff6a3a;
 }
 .footer {
   margin-top: 5px;
@@ -80,4 +101,53 @@ button:hover {
 .footer a {
   color: hsl(4, 100%, 67%);
   text-decoration: none;
+}
+
+
+/* Smaller Screens (e.g., Mobile Phones) */
+@media screen and (max-width: 768px) {
+  body {
+
+  background-color: white;
+  }
+  .container {
+    width: 280px;
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: center; /* Center content vertically */
+  }
+.main-img {
+  width: 200px;
+  align-items: center;
+}
+  .active-form {
+    margin-right: 0; /* Remove margin for smaller screens */
+    text-align: center; /* Center text */
+  }
+
+  .main-title {
+    font-size: 40px; /* Decrease font size for smaller screens */
+  }
+
+  .features-list {
+    text-align: center; /* Center list items */
+  }
+
+  input {
+    width: 100%; /* Full width for email input */
+    max-width: 320px; /* Limit maximum width for larger screens */
+    margin-top: 10px; /* Reduce top margin */
+  }
+
+  .email {
+    margin-top: 20px; /* Reduce top margin */
+  }
+
+  button {
+    width: 100%; /* Full width for button */
+    font-size: 18px; /* Increase font size for better usability */
+  }
+
+  .footer {
+    font-size: 10px; /* Decrease font size for the footer */
+  }
 }
