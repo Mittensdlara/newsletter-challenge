@@ -1,5 +1,3 @@
-
-
 body {
   font-family: "Roboto", sans-serif;
   background-color: hsl(234, 29%, 20%);
@@ -45,12 +43,10 @@ input {
   height: 50px;
   border-radius: 10px;
   padding-left: 20px;
-
 }
 .register {
-    display: flex;
-    justify-content: space-between;
-
+  display: flex;
+  justify-content: space-between;
 }
 
 .email {
@@ -70,7 +66,6 @@ input[type="email"]:invalid {
   font-size: 12px;
   font-weight: 700;
   padding-top: 28px;
-
 }
 .features-list {
   font-size: 15px;
@@ -104,24 +99,28 @@ button:hover {
 }
 
 
-/* Smaller Screens (e.g., Mobile Phones) */
 @media screen and (max-width: 768px) {
   body {
-
-  background-color: white;
+    margin: 0;
+    padding: 0;
+    background-color: white;
   }
   .container {
-    width: 280px;
-    flex-direction: column; /* Stack elements vertically on smaller screens */
-    align-items: center; /* Center content vertically */
+    margin: 0;
+    padding: 0;
+    width: 375px;
+    flex-direction: column-reverse;
+    overflow: hidden;
   }
-.main-img {
-  width: 200px;
-  align-items: center;
-}
+  .main-img {
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
   .active-form {
-    margin-right: 0; /* Remove margin for smaller screens */
-    text-align: center; /* Center text */
+    margin: 10px;
+    padding: 10px;
   }
 
   .main-title {
@@ -129,25 +128,28 @@ button:hover {
   }
 
   .features-list {
-    text-align: center; /* Center list items */
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
   }
 
   input {
-    width: 100%; /* Full width for email input */
-    max-width: 320px; /* Limit maximum width for larger screens */
-    margin-top: 10px; /* Reduce top margin */
+    width: 100%;
+    max-width: 310px;
+    margin-top: 10px;
   }
 
   .email {
-    margin-top: 20px; /* Reduce top margin */
+    margin-top: 20px;
   }
 
   button {
-    width: 100%; /* Full width for button */
-    font-size: 18px; /* Increase font size for better usability */
+    width: 100%;
+    font-size: 12px;
   }
 
   .footer {
-    font-size: 10px; /* Decrease font size for the footer */
+    font-size: 10px;
+    color: black;
   }
 }
